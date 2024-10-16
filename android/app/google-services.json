@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "356307840908",
+    "project_id": "flutter-firebase-11",
+    "storage_bucket": "flutter-firebase-11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356307840908:android:749833205e2f63d1bab0a9",
+        "android_client_info": {
+          "package_name": "com.example.we_assist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPQTRXJSvVloSVH4OBTEBBGwIuEVvzA1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356307840908:android:366743a5125c40e1bab0a9",
+        "android_client_info": {
+          "package_name": "com.weassist.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPQTRXJSvVloSVH4OBTEBBGwIuEVvzA1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
