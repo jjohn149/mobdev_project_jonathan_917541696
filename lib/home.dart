@@ -18,7 +18,7 @@ class Home extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {},
-              child: const Text("Order Lunch"),
+              child: const Text("Emergency"),
             ),
             ElevatedButton(
               onPressed: () {},
@@ -26,11 +26,19 @@ class Home extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {},
-              child: const Text("Call My Loved Ones"),
+              child: const Text("Meals"),
             ),
             ElevatedButton(
               onPressed: () {},
-              child: const Text("Interesting Places"),
+              child: const Text("Calender"),
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text("Camera"),
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text("Map"),
             ),
             ElevatedButton(
               onPressed: () {
