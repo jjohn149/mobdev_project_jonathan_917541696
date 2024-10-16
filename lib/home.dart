@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:we_assist/calender.dart';
+import 'package:we_assist/camera.dart';
+import 'package:we_assist/emergency.dart';
+import 'package:we_assist/help.dart';
+import 'package:we_assist/map.dart';
+import 'package:we_assist/meals.dart';
 import 'main.dart';
 
 class Home extends StatelessWidget {
@@ -17,27 +23,69 @@ class Home extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Emergency(),
+                  ),
+                );
+              },
               child: const Text("Emergency"),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Help(),
+                  ),
+                );
+              },
               child: const Text("Help"),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Meals(),
+                  ),
+                );
+              },
               child: const Text("Meals"),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Calender(),
+                  ),
+                );
+              },
               child: const Text("Calender"),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Camera(),
+                  ),
+                );
+              },
               child: const Text("Camera"),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Map(),
+                  ),
+                );
+              },
               child: const Text("Map"),
             ),
             ElevatedButton(
