@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "356307840908",
-    "project_id": "flutter-firebase-11",
-    "storage_bucket": "flutter-firebase-11.appspot.com"
+    "project_number": "175480440412",
+    "project_id": "my-awesome-project-mobiled",
+    "storage_bucket": "my-awesome-project-mobiled.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:356307840908:android:749833205e2f63d1bab0a9",
+        "mobilesdk_app_id": "1:175480440412:android:d1c7d18a511e5b57fb0899",
         "android_client_info": {
           "package_name": "com.example.we_assist"
         }
@@ -15,26 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDPQTRXJSvVloSVH4OBTEBBGwIuEVvzA1Y"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:356307840908:android:366743a5125c40e1bab0a9",
-        "android_client_info": {
-          "package_name": "com.weassist.app"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDPQTRXJSvVloSVH4OBTEBBGwIuEVvzA1Y"
+          "current_key": "AIzaSyCVYjHclvx249vrLYmw2r3UB92snOi0Cts"
         }
       ],
       "services": {

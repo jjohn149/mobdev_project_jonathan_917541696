@@ -26,6 +26,8 @@ class AuthenticPage extends StatefulWidget {
 
 class AuthenticPageState extends State<AuthenticPage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  String username = '';
+  String password = '';
 
   bool isValid = false;
 
@@ -33,6 +35,29 @@ class AuthenticPageState extends State<AuthenticPage> {
     setState(() {
       isValid = _formKey.currentState!.validate();
     });
+  }
+
+  void login() {
+    // Credentials
+    const dummyUsername = "mobiledev";
+    const dummyPassword = "password";
+
+    // Check if entered credentials match dummy credentials
+    if (username == dummyUsername && password == dummyPassword) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const Home(),
+        ),
+      );
+    } else {
+      // Error message
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Invalid username or password'),
+        ),
+      );
+    }
   }
 
   @override
@@ -63,6 +88,10 @@ class AuthenticPageState extends State<AuthenticPage> {
                   if (value!.isEmpty) {
                     return "Please enter a username";
                   }
+                  return null;
+                },
+                onChanged: (value) {
+                  username = value; // Capture the username input
                 },
               ),
               TextFormField(
@@ -76,23 +105,18 @@ class AuthenticPageState extends State<AuthenticPage> {
                   if (value!.isEmpty) {
                     return "Please enter password";
                   }
+                  return null;
                 },
                 obscureText: true,
+                onChanged: (value) {
+                  password = value; // Capture the password input
+                },
               ),
               const SizedBox(
                 height: 20,
               ),
               ElevatedButton(
-                onPressed: isValid
-                    ? () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const Home(),
-                          ),
-                        );
-                      }
-                    : null,
+                onPressed: isValid ? login : null,
                 child: const Text("Login"),
               ),
               ElevatedButton(
