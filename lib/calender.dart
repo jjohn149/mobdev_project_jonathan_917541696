@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:we_assist/camera.dart';
+import 'package:we_assist/emergency.dart';
+import 'package:we_assist/help.dart';
+import 'package:we_assist/home.dart';
+import 'package:we_assist/map.dart';
+import 'package:we_assist/meals.dart';
 import 'main.dart';
 
 class Calender extends StatelessWidget {
@@ -27,6 +33,89 @@ class Calender extends StatelessWidget {
               },
               child: const Text("Logout"),
             )
+          ],
+        ),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: <Widget>[
+            ListTile(
+              title: Text('Home'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Home(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('Calender'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Calender(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('Camera'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Camera(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('Emergency'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Emergency(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('Help'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Help(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('Map'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Map(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('Meals'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Meals(),
+                  ),
+                );
+              },
+            ),
           ],
         ),
       ),
