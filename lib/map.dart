@@ -9,7 +9,9 @@ import 'package:we_assist/main.dart';
 import 'package:we_assist/meals.dart';
 
 class Map extends StatefulWidget {
-  const Map({super.key});
+  final String username;
+
+  const Map({Key? key, required this.username}) : super(key: key);
 
   @override
   State<Map> createState() => _MapState();
@@ -35,6 +37,17 @@ class _MapState extends State<Map> {
         appBar: AppBar(
           title: const Text('Maps'),
           elevation: 2,
+          actions: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Center(
+                child: Text(
+                  widget.username,
+                  style: const TextStyle(fontSize: 18, color: Colors.black),
+                ),
+              ),
+            ),
+          ],
         ),
         body: GoogleMap(
           onMapCreated: _onMapCreated,
@@ -52,7 +65,7 @@ class _MapState extends State<Map> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Home(),
+                      builder: (context) => Home(username: widget.username),
                     ),
                   );
                 },
@@ -63,7 +76,7 @@ class _MapState extends State<Map> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Calender(),
+                      builder: (context) => Calender(username: widget.username),
                     ),
                   );
                 },
@@ -74,7 +87,7 @@ class _MapState extends State<Map> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Camera(),
+                      builder: (context) => Camera(username: widget.username),
                     ),
                   );
                 },
@@ -85,7 +98,8 @@ class _MapState extends State<Map> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Emergency(),
+                      builder: (context) =>
+                          Emergency(username: widget.username),
                     ),
                   );
                 },
@@ -96,7 +110,7 @@ class _MapState extends State<Map> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Help(),
+                      builder: (context) => Help(username: widget.username),
                     ),
                   );
                 },
@@ -107,7 +121,7 @@ class _MapState extends State<Map> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Map(),
+                      builder: (context) => Map(username: widget.username),
                     ),
                   );
                 },
@@ -118,7 +132,7 @@ class _MapState extends State<Map> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Meals(),
+                      builder: (context) => Meals(username: widget.username),
                     ),
                   );
                 },

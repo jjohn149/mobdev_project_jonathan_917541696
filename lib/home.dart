@@ -8,7 +8,9 @@ import 'package:we_assist/meals.dart';
 import 'main.dart';
 
 class Home extends StatelessWidget {
-  const Home({super.key});
+  final String username;
+
+  const Home({Key? key, required this.username}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +19,17 @@ class Home extends StatelessWidget {
         title: const Text("Easy Assist"),
         centerTitle: true,
         backgroundColor: Colors.lightBlue,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Center(
+              child: Text(
+                username,
+                style: const TextStyle(fontSize: 18, color: Colors.black),
+              ),
+            ),
+          ),
+        ],
       ),
       body: Center(
         child: Column(
@@ -27,7 +40,7 @@ class Home extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Emergency(),
+                    builder: (context) => Emergency(username: username),
                   ),
                 );
               },
@@ -38,7 +51,7 @@ class Home extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Help(),
+                    builder: (context) => Help(username: username),
                   ),
                 );
               },
@@ -49,7 +62,7 @@ class Home extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Meals(),
+                    builder: (context) => Meals(username: username),
                   ),
                 );
               },
@@ -60,7 +73,7 @@ class Home extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Calender(),
+                    builder: (context) => Calender(username: username),
                   ),
                 );
               },
@@ -71,7 +84,7 @@ class Home extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Camera(),
+                    builder: (context) => Camera(username: username),
                   ),
                 );
               },
@@ -82,7 +95,7 @@ class Home extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Map(),
+                    builder: (context) => Map(username: username),
                   ),
                 );
               },
@@ -100,7 +113,7 @@ class Home extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Home(),
+                    builder: (context) => Home(username: username),
                   ),
                 );
               },
@@ -111,7 +124,7 @@ class Home extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Calender(),
+                    builder: (context) => Calender(username: username),
                   ),
                 );
               },
@@ -122,7 +135,7 @@ class Home extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Camera(),
+                    builder: (context) => Camera(username: username),
                   ),
                 );
               },
@@ -133,7 +146,7 @@ class Home extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Emergency(),
+                    builder: (context) => Emergency(username: username),
                   ),
                 );
               },
@@ -144,7 +157,7 @@ class Home extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Help(),
+                    builder: (context) => Help(username: username),
                   ),
                 );
               },
@@ -155,7 +168,7 @@ class Home extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Map(),
+                    builder: (context) => Map(username: username),
                   ),
                 );
               },
@@ -166,7 +179,7 @@ class Home extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Meals(),
+                    builder: (context) => Meals(username: username),
                   ),
                 );
               },

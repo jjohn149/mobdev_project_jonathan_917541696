@@ -8,8 +8,9 @@ import 'package:we_assist/meals.dart';
 import 'main.dart';
 
 class Emergency extends StatelessWidget {
-  const Emergency({super.key});
+  final String username;
 
+  const Emergency({Key? key, required this.username}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,6 +18,17 @@ class Emergency extends StatelessWidget {
         title: const Text("Emergency"),
         centerTitle: true,
         backgroundColor: Colors.lightBlue,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Center(
+              child: Text(
+                username,
+                style: const TextStyle(fontSize: 18, color: Colors.black),
+              ),
+            ),
+          ),
+        ],
       ),
       body: const Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly),
@@ -30,7 +42,7 @@ class Emergency extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Home(),
+                    builder: (context) => Home(username: username),
                   ),
                 );
               },
@@ -41,7 +53,7 @@ class Emergency extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Calender(),
+                    builder: (context) => Calender(username: username),
                   ),
                 );
               },
@@ -52,7 +64,7 @@ class Emergency extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Camera(),
+                    builder: (context) => Camera(username: username),
                   ),
                 );
               },
@@ -63,7 +75,7 @@ class Emergency extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Emergency(),
+                    builder: (context) => Emergency(username: username),
                   ),
                 );
               },
@@ -74,7 +86,7 @@ class Emergency extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Help(),
+                    builder: (context) => Help(username: username),
                   ),
                 );
               },
@@ -85,7 +97,7 @@ class Emergency extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Map(),
+                    builder: (context) => Map(username: username),
                   ),
                 );
               },
@@ -96,7 +108,7 @@ class Emergency extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Meals(),
+                    builder: (context) => Meals(username: username),
                   ),
                 );
               },

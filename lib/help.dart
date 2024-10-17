@@ -8,7 +8,9 @@ import 'package:we_assist/meals.dart';
 import 'main.dart';
 
 class Help extends StatelessWidget {
-  const Help({super.key});
+  final String username;
+
+  const Help({Key? key, required this.username}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +19,17 @@ class Help extends StatelessWidget {
         title: const Text("Help"),
         centerTitle: true,
         backgroundColor: Colors.lightBlue,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Center(
+              child: Text(
+                username,
+                style: const TextStyle(fontSize: 18, color: Colors.black),
+              ),
+            ),
+          ),
+        ],
       ),
       body: const Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly),
@@ -30,7 +43,7 @@ class Help extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Home(),
+                    builder: (context) => Home(username: username),
                   ),
                 );
               },
@@ -41,7 +54,7 @@ class Help extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Calender(),
+                    builder: (context) => Calender(username: username),
                   ),
                 );
               },
@@ -52,7 +65,7 @@ class Help extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Camera(),
+                    builder: (context) => Camera(username: username),
                   ),
                 );
               },
@@ -63,7 +76,7 @@ class Help extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Emergency(),
+                    builder: (context) => Emergency(username: username),
                   ),
                 );
               },
@@ -74,7 +87,7 @@ class Help extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Help(),
+                    builder: (context) => Help(username: username),
                   ),
                 );
               },
@@ -85,7 +98,7 @@ class Help extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Map(),
+                    builder: (context) => Map(username: username),
                   ),
                 );
               },
@@ -96,7 +109,7 @@ class Help extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Meals(),
+                    builder: (context) => Meals(username: username),
                   ),
                 );
               },

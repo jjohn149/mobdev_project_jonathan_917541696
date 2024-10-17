@@ -47,7 +47,7 @@ class AuthenticPageState extends State<AuthenticPage> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => const Home(),
+          builder: (context) => Home(username: username),
         ),
       );
     } else {
