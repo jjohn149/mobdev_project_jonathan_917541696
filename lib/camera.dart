@@ -18,23 +18,8 @@ class Camera extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.lightBlue,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const AuthenticPage(),
-                  ),
-                );
-              },
-              child: const Text("Logout"),
-            )
-          ],
-        ),
+      body: const Center(
+        child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly),
       ),
       drawer: Drawer(
         child: ListView(
@@ -112,6 +97,17 @@ class Camera extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const Meals(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('Logout'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AuthenticPage(),
                   ),
                 );
               },

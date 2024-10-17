@@ -88,17 +88,6 @@ class Home extends StatelessWidget {
               },
               child: const Text("Map"),
             ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const AuthenticPage(),
-                  ),
-                );
-              },
-              child: const Text("Logout"),
-            )
           ],
         ),
       ),
@@ -178,6 +167,17 @@ class Home extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const Meals(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('Logout'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AuthenticPage(),
                   ),
                 );
               },

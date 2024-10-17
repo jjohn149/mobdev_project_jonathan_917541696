@@ -5,6 +5,7 @@ import 'package:we_assist/camera.dart';
 import 'package:we_assist/emergency.dart';
 import 'package:we_assist/help.dart';
 import 'package:we_assist/home.dart';
+import 'package:we_assist/main.dart';
 import 'package:we_assist/meals.dart';
 
 class Map extends StatefulWidget {
@@ -118,6 +119,17 @@ class _MapState extends State<Map> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const Meals(),
+                    ),
+                  );
+                },
+              ),
+              ListTile(
+                title: Text('Logout'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AuthenticPage(),
                     ),
                   );
                 },
